@@ -1,0 +1,59 @@
+
+.divNav {
+    background-color: rgba(250, 250, 250, 0.6);
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.divBtn {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navButton {
+   margin-bottom: 50px;
+   margin-left: 10px;
+   border: 2px solid black;
+   border-radius: 15px;
+   padding: 5px;
+   font-weight: bold;
+   background-color: rgba(234, 0, 255, 0.6);
+   margin-top: 60px;
+   width: 80px;
+}
+
+.navButton a {
+    text-decoration: none;
+    color:black;
+}
+
+.divRick {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgRick {
+    width: 200px;
+}
+
+.divHenry {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgHenry {
+    width: 80px;
+    border-radius: 100%;
+    
+}
+
+.imgHenry:hover {
+    opacity: 0.6;
+}
