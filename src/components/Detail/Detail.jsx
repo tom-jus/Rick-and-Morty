@@ -27,27 +27,29 @@ export default function Detail() {
       <>
             {character.name ? (
               <>
+            <div className={styles.divDetail2}>
             <div className={styles.divDetail}>
               <div className={styles.divImg}>
                 <img className={styles.image} src={character.image} alt="Character image"/>
               </div>
               <div className={styles.divNames}>
-                <h2 className={styles.names}>{character.name}</h2>
-                <h2 className={styles.names}>{character.status}</h2>
-                <h2 className={styles.names}>{character.gender}</h2>
-                <h2 className={styles.names}>{character.species}</h2>
-                <h2 className={styles.names}>{character.origin?.name}</h2>
+                <h2 className={styles.names}>Name: {character.name}</h2>
+                <h2 className={styles.names}>Status: {character.status}</h2>
+                <h2 className={styles.names}>Gender: {character.gender}</h2>
+                <h2 className={styles.names}>Specie: {character.species}</h2>
+                <h2 className={styles.names}>Origin: {character.origin?.name}</h2>
               </div>
-          </div>
+            </div>
+            </div>
             </>
             ) : (<h1 className={styles.loading}>Loading...</h1>)  
             }
 
            
       
-            <button className={styles.btn}>
-                <NavLink to={"/home"}>BACK</NavLink>
-            </button>
+            <NavLink to={"/home"}>
+              <button className={styles.btn}>BACK</button>
+            </NavLink>
       </>
     )
 };

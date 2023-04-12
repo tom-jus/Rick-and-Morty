@@ -18,6 +18,10 @@
     transition: all 0.5s;
 }
 
+.divDetail2 {
+    
+}
+
 .divDetail:hover {
     transform: scale(1.05);
 }

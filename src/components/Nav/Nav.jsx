@@ -3,7 +3,11 @@ import { NavLink } from "react-router-dom";
 import styles from "./Nav.module.css"
 
 
-export default function Nav({onSearch, logout}) {
+export default function Nav({ onSearch, setAccess }) {
+
+        const logOut = () => {
+                setAccess(false);
+        }
 
     return (
         <>
@@ -14,18 +18,26 @@ export default function Nav({onSearch, logout}) {
         </div>
 
         <div className={styles.divBtn}>
-                <button className={styles.navButton}>
-                        <NavLink to='/home'>HOME</NavLink>
-                </button>
-                <button className={styles.navButton}>
-                        <NavLink to='/detail/:id'>DETAIL</NavLink>
-                </button>
-                <button className={styles.navButton}>
-                        <NavLink to='/about'>ABOUT</NavLink>
-                </button>
-                <button className={styles.navButton}>
-                        <NavLink to="/">LOGOUT</NavLink>
-                </button>
+        <NavLink to='/home'>
+                <button className={styles.navButton}>Home</button>
+        </NavLink>
+                
+        <NavLink to='/detail/:id'>
+                <button className={styles.navButton}>Detail</button>
+        </NavLink>
+
+        <NavLink to='/about'>
+                <button className={styles.navButton}>About</button>
+        </NavLink>
+
+        <NavLink to='/favorites'>
+                <button className={styles.navButton}>Favorites</button>
+        </NavLink>
+
+        <NavLink to="/">
+                <button onClick={logOut} className={styles.navButton}>Log out</button>
+        </NavLink>
+
         </div>
         <div className={styles.divHenry}>
                 <a href="https://www.soyhenry.com/" target="_blank">
