@@ -18,19 +18,13 @@
 }
 
 .botonFav {
-    /* border: 2px solid black; */
     border-radius: 100%;
     background: rgba(244, 0, 199, 0);
     border:none;
-    /* color: white; */
 }
 
 .container:hover {
     transform: scale(1.06);
-}
-
-.container:active {
-    transform: scale(0.95) rotateZ(1.7deg);
 }
 
 .boton {
