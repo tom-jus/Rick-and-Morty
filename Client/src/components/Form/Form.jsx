@@ -5,7 +5,7 @@ import validation from "./validation"
 export default function Form( {login} ) {
 
     const [userData, setUserData] = useState({
-        username: "",
+        email: "",
         password: ""
     });
 
@@ -36,9 +36,9 @@ export default function Form( {login} ) {
                 <img src="https://logos-world.net/wp-content/uploads/2022/01/Rick-And-Morty-Logo.png" alt="RickMorty" className={styles.imgLogin} />
             </div>
             <form onSubmit={handleOnSubmit} className={styles.divForm}>
-                <label htmlFor="username">Username </label>
-                <input type="email" name="username" value={userData.username} onChange={handleInputChange} />
-                {errors.username && <span>{errors.username}</span>}
+                <label htmlFor="email">Email </label>
+                <input type="email" name="email" value={userData.email} onChange={handleInputChange} />
+                {errors.email && <span>{errors.email}</span>}
 
                 <label htmlFor="password">Password </label>
                 <input type="password" value={userData.password} onChange={handleInputChange} name="password" />

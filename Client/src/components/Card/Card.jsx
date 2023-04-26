@@ -16,7 +16,7 @@ export function Card({id, name, status, species, origin, gender, image, onClose,
       else {
          setIsFav(true);
          addFav({id, name, status, species, origin, gender, image, onClose});
-         // En la funcion de abajo addFav, llega un objeto (character) por parametro, y realizamos el destructuring de ese objeto para obtener determinados datos
+         // En la funcion de addFav (actions), llega un objeto (character) por parametro, y realizamos el destructuring de ese objeto para obtener determinados datos
       }
    }
 
@@ -48,8 +48,6 @@ export function Card({id, name, status, species, origin, gender, image, onClose,
          </NavLink>
          <h2 className={styles.description}>Status: {status}</h2>
          <h2 className={styles.description}>Gender: {gender}</h2>
-         {/* <h2 className={styles.description}>Species: {species}</h2> */}
-         {/* <h2 className={styles.description}>Origin: {origin}</h2> */}
       </div>
    )
 };
